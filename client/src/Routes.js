@@ -6,7 +6,6 @@ import SinglePost from './SinglePost'
 import UpdatePost from './UpdatePost'
 import Login from './Login'
 import PrivateRoute from './PrivateRoute'
-import notes from './notes.jpg'
 import './main.css'
 
 

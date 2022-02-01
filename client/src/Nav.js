@@ -4,24 +4,24 @@ import {getUser, logout} from './helpers'
 
 const Nav = ({history}) => {
     return(
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/" as={Link} to="/">Home</a>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="/" as={Link} to="/">Home</a>
     
-    <div class="collapse navbar-collapse" >
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active"  href="/create" as={Link} to="/create">Create Note</a>
+    <div className="collapse navbar-collapse" >
+      <ul className="navbar-nav">
+        <li className="nav-item">
+          <a className="nav-link active"  href="/create" as={Link} to="/create">Create Note</a>
         </li>
         {!getUser() && (
                     <li className="nav-item">
-                        <a class="nav-link active" href="/login" as={Link} to="/login">Login</a>
+                        <a className="nav-link active" href="/login" as={Link} to="/login">Login</a>
 
                 </li>
                )}
                {getUser() && (
                     <li onClick={() => logout(() => history.push('/'))} className="nav-item">
-                      <a class="nav-link active" href="/" as={Link} to="/">Logout</a>
+                      <a className="nav-link active" href="/" as={Link} to="/">Logout</a>
                     
                 </li>
                )}

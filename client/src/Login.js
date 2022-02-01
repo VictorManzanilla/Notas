@@ -8,8 +8,8 @@ import './main.css'
 
 const Login = (props) => {
     const [state, setState] = useState({
-        name: '',
-        password: ''
+        username: 'Admin',
+        password: 'SuperAdmin'
     })
 //destructure values from state
     const {username, password} = state

@@ -44,7 +44,7 @@ const deletePost = (slug) => {
 
   return (
   <div className="col-lg-6 offset-lg-3" >
-    <div class="row justify-content-center">
+    <div className="row justify-content-center">
     
     <Nav/>
     <br />

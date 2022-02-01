@@ -12,11 +12,11 @@ const SinglePost = (props) => {
     useEffect(() => {
         axios.get(`http://localhost:8000/api/post/${props.match.params.slug}`)
         .then(response => {
-            //console.log(response)
+            console.log(response)
             setPost(response.data)
         })
         .catch(error => alert('Error loading single post'))
-    }, [])
+    }, [props.match.params.slug])
 
     const showSinglePost = () => (
         <div className="row">
