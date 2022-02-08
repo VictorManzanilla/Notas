@@ -15,19 +15,17 @@ const Create = () => {
 
     const [content, setContent] = useState('')
 
+
     // rich text editor handle change
     const handleContent = (e) => {
         console.log(e)
         setContent(e)
     }
-
-
-
-
     //destructure values from state. content was remove for the reactquill(rich text editor), look at state
     const {title, user} = state
 
     //onchange event handler
+    //name is the argument for title and user and event is argument for the value of title and user
     const handleChange = (name) => (event) => {
         //console.log('name', name, 'value', event.target.value)
         setState({...state, [name]: event.target.value})

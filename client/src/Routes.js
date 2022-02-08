@@ -10,6 +10,7 @@ import './main.css'
 
 
 const Routes = () => {
+  
     return(
         <div className="foto">
         

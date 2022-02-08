@@ -90,10 +90,10 @@ const UpdatePost = (props) => {
     </form>
     )
     return(
-        <div className="container pb-5">
+        <div className="container-lg update_padding">
             <Nav/>
             <br/>
-            <h1>Update Post</h1>
+            <h1 className='display-1 update_title'>Update Post</h1>
            {showUpdateForm()}
         </div>
     )

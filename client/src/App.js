@@ -47,8 +47,8 @@ const deletePost = (slug) => {
     <div className="row justify-content-center">
     
     <Nav/>
-    <br />
-    <h1>Notas </h1>
+  
+    <h1 className='display-1 mt-5'>Notas </h1>
     {
       posts.map((post, i) => (
         <div className="row" key={post._id} style={{borderBottom: '1px solid blue'}}>
@@ -57,8 +57,8 @@ const deletePost = (slug) => {
               <div className="col-md-10">
                 <Link to={`/post/${post.slug}`} ><h2>{post.title}</h2></Link>
                 <div className="lead pt-3">{renderHTML(post.content.substring(0, 100))}</div>
-                <p>Author<span className="badge">{post.user}</span> Published on{' '} 
-                <span className="badge">{new Date(post.createdAt).toLocaleString()}</span>
+                <p className='font-weight-bolder'>Author: <span className="badge badge-secondary">{post.user}</span> Published on: {' '} 
+                <span className="badge badge-pill badge-light">{new Date(post.createdAt).toLocaleString()}</span>
                 </p>
               </div>
                {getUser() && (
@@ -66,8 +66,10 @@ const deletePost = (slug) => {
                  <Link to={`/post/update/${post.slug}`} className="btn btn-sm btn-outline-warning">
                     Update
                  </Link>
-                 <button  onClick={() => deleteConfirm(post.slug)} 
-                 className="btn btn-sm btn-outline-danger ml-1">
+                 
+                 <button  
+                 onClick={() => deleteConfirm(post.slug)} 
+                 className="btn btn-sm btn-outline-danger ml-1 delete">
                    Delete</button>
                 </div>
                )}

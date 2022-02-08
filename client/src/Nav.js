@@ -4,7 +4,7 @@ import {getUser, logout} from './helpers'
 
 const Nav = ({history}) => {
   return(
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light ">
         <div className="container-fluid">
           <a className="navbar-brand" href="/" as={Link} to="/">Home</a>
           
@@ -13,6 +13,7 @@ const Nav = ({history}) => {
               <li className="nav-item">
                 <a className="nav-link active"  href="/create" as={Link} to="/create">Create Note</a>
               </li>
+              
         {!getUser() && (
                     <li className="nav-item">
                         <a className="nav-link active" href="/login" as={Link} to="/login">Login</a>

@@ -12,7 +12,7 @@ const SinglePost = (props) => {
     useEffect(() => {
         axios.get(`http://localhost:8000/api/post/${props.match.params.slug}`)
         .then(response => {
-            console.log(response)
+            //console.log(response)
             setPost(response.data)
         })
         .catch(error => alert('Error loading single post'))
@@ -20,7 +20,7 @@ const SinglePost = (props) => {
 
     const showSinglePost = () => (
         <div className="row">
-            <div className="col-md-8 offset-md-2 pt-3 pb-2">
+            <div className="col-md-8 offset-md-2 mt-5 pt-5">
                 <h1>{post.title}</h1>
                 <div className="lead pt-3">{renderHTML(post.content)}</div>
                 <p>
@@ -36,7 +36,7 @@ const SinglePost = (props) => {
     //post && showSinglePost why? post is available by running the useEffect, so the function renderHTML tries to render before there is any content
     // so we get error when we have {renderHTML(post.content)} in the div classname lead pt-3.
     return(
-        <div className="container pb-5">
+        <div className="container ">
             <Nav/>
             {post && showSinglePost()}
         </div>
