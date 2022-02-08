@@ -33,7 +33,7 @@ const UpdatePost = (props) => {
             setContent(content)
         })
         .catch(error => alert('Error loading single post'))
-    }, [props.match.params.slug, state])
+    }, [])
 
     const handleChange = (name) => (event) => {
         //console.log('name', name, 'value', event.target.value)
