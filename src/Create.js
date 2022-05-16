@@ -34,7 +34,7 @@ const Create = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         axios
-        .post('http://localhost:8000/api/post', {title, content, user}, {
+        .post(`${process.env.REACT_APP_API}/post`, {title, content, user}, {
             headers: {
                 authorization: `Bearer ${getToken()}`
             }

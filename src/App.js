@@ -10,7 +10,7 @@ const App = () => {
   const [posts, setPosts] = useState([])
 
   const fetchPosts = () => {
-    axios.get('http://localhost:8000/api/posts')
+    axios.get(`${process.env.REACT_APP_API}/posts`)
     .then(response => {
       // console.log(response)
       setPosts(response.data)
@@ -30,7 +30,7 @@ const deleteConfirm = (slug) => {
 
 const deletePost = (slug) => {
   // console.log('delete', slug, 'post')
-  axios.delete(`http://localhost:8000/api/post/${slug}`,{
+  axios.delete(`{process.env.REACT_APP_API}/post/${slug}`,{
     headers: {
         authorization: `Bearer ${getToken()}`
     }

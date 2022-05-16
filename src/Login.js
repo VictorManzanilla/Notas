@@ -29,7 +29,7 @@ const Login = (props) => {
         e.preventDefault()
         //console.log(username, password)
         axios
-        .post('http://localhost:8000/api/login', {username, password})
+        .post(`${process.env.REACT_APP_API}/login`, {username, password})
         .then(response => {
             //console.log(response)
             // response will contain token and name, redirect to home page
