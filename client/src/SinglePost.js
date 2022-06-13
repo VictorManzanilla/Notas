@@ -10,7 +10,7 @@ const SinglePost = (props) => {
     const [post, setPost] = useState('')
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/post/${props.match.params.slug}`)
+        axios.get(`${process.env.REACT_APP_API}/post/${props.match.params.slug}`)
         .then(response => {
             //console.log(response)
             setPost(response.data)

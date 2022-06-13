@@ -26,7 +26,7 @@ const UpdatePost = (props) => {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/post/${props.match.params.slug}`)
+        axios.get(`${process.env.REACT_APP_API}/post/${props.match.params.slug}`)
         .then(response => {
             const {title, content, slug, user} = response.data
             setState({...state, title, slug, user})
@@ -43,7 +43,7 @@ const UpdatePost = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         axios
-        .put(`http://localhost:8000/api/post/${slug}`, {title, content, user}, {
+        .put(`${process.env.REACT_APP_API}/post/${slug}`, {title, content, user}, {
             headers: {
                 authorization: `Bearer ${getToken()}`
             }
