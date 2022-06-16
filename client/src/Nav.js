@@ -20,6 +20,10 @@ const Nav = ({history}) => {
 
                 </li>
                )}
+               <li className="nav-item">
+                        <a className="nav-link active" href="/register" as={Link} to="/login">Register</a>
+
+                </li>
                {getUser() && (
                     <li onClick={() => logout(() => history.push('/'))} className="nav-item">
                       <a className="nav-link active" href="/" as={Link} to="/">Logout</a>

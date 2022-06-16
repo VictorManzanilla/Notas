@@ -7,6 +7,7 @@ import UpdatePost from './UpdatePost'
 import Login from './Login'
 import PrivateRoute from './PrivateRoute'
 import './main.css'
+import Register from './Register'
 
 
 const Routes = () => {
@@ -21,6 +22,8 @@ const Routes = () => {
             <Route path="/login"  exact component={Login} />
             <Route path="/post/:slug"  exact component={SinglePost} />
             <PrivateRoute path="/post/update/:slug"  exact component={UpdatePost} />
+            <Route path="/register" exact component={Register} />
+
 
         </Switch>
         </BrowserRouter>
