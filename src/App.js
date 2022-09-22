@@ -30,7 +30,7 @@ const deleteConfirm = (slug) => {
 
 const deletePost = (slug) => {
   // console.log('delete', slug, 'post')
-  axios.delete(`{process.env.REACT_APP_API}/post/${slug}`,{
+  axios.delete(`${process.env.REACT_APP_API}/post/${slug}`,{
     headers: {
         authorization: `Bearer ${getToken()}`
     }
